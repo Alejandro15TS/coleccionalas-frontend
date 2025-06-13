@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Puedes añadir estilos personalizados debajo si quieres */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
