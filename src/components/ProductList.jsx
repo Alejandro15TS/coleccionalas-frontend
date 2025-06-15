@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
@@ -6,7 +5,7 @@ export default function ProductList({ selectedCategory, addToCart }) {
   const [productos, setProductos] = useState([])
 
   useEffect(() => {
-    axios.get('`${import.meta.env.VITE_BACKEND_URL}/productos`')
+    axios.get(`${import.meta.env.VITE_BACKEND_URL}/productos`)
       .then((res) => setProductos(res.data))
       .catch((err) => console.error('Error al obtener productos:', err))
   }, [])
