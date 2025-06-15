@@ -31,7 +31,7 @@ export default function CrearProducto() {
         return
       }
 
-      await axios.post('http://localhost:3001/productos', nuevoProducto, {
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/productos`, nuevoProducto, {
         headers: {
           Authorization: `Bearer ${token}`
         }

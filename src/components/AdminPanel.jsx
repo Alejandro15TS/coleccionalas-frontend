@@ -27,7 +27,7 @@ export default function AdminPanel() {
     const token = localStorage.getItem('token')
 
     try {
-      await axios.delete(`http://localhost:3001/productos/${id}`, {
+      await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/productos/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }

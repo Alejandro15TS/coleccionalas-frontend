@@ -12,7 +12,7 @@ export default function HistorialPedidos() {
       return
     }
 
-    axios.get('http://localhost:3001/historial-pedidos', {
+    axios.get(`${import.meta.env.VITE_BACKEND_URL}/historial-pedidos`, {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => {

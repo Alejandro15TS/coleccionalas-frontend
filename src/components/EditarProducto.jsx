@@ -27,7 +27,7 @@ export default function EditarProducto() {
     e.preventDefault();
 
     const token = localStorage.getItem('token');
-    axios.put(`http://localhost:3001/admin/productos/${id}`, producto, {
+    axios.put(`${import.meta.env.VITE_BACKEND_URL}/admin/productos/${id}`, producto, {
       headers: {
         Authorization: `Bearer ${token}`
       }

@@ -13,7 +13,7 @@ export default function Cart({ cart, removeFromCart, setCart }) {
     }));
 
     try {
-      const respuesta = await axios.post('http://localhost:3001/crear-pedido', {
+      const respuesta = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/crear-pedido`, {
         carrito: carritoProcesado,
         metodo_pago: 'paypal'
       }, {

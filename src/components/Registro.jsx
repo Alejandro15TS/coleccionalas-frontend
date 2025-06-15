@@ -12,7 +12,7 @@ export default function Registro() {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    axios.post('http://localhost:3001/registro', form)  // ✅ Llamada directa al backend
+    axios.post(`${import.meta.env.VITE_BACKEND_URL}/registro`, form)  // ✅ Llamada directa al backend
 
       .then(res => {
         setMensaje('Usuario registrado correctamente ✅')

@@ -16,7 +16,7 @@ export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    axios.post('http://localhost:3001/login', form)
+    axios.post('`${import.meta.env.VITE_BACKEND_URL}/login', form)
       .then(res => {
         setMensaje('Login exitoso ✅')
         setUsuario(res.data.usuario) // Guardamos el usuario en el estado

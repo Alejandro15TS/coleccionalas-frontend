@@ -6,7 +6,7 @@ export default function ProductList({ selectedCategory, addToCart }) {
   const [productos, setProductos] = useState([])
 
   useEffect(() => {
-    axios.get('http://localhost:3001/productos')
+    axios.get('`${import.meta.env.VITE_BACKEND_URL}/productos`')
       .then((res) => setProductos(res.data))
       .catch((err) => console.error('Error al obtener productos:', err))
   }, [])
