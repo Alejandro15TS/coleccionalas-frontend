@@ -31,7 +31,16 @@ export default function CrearProducto() {
         return
       }
 
-      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/productos`, nuevoProducto, {
+      // Enviar solo los campos esperados por el backend
+      const { nombre, descripcion, precio, imagen_url, categoria_id } = nuevoProducto;
+
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/productos`, {
+        nombre,
+        descripcion,
+        precio,
+        imagen_url,
+        categoria_id
+      }, {
         headers: {
           Authorization: `Bearer ${token}`
         }

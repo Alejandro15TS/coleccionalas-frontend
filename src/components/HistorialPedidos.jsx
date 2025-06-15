@@ -36,17 +36,21 @@ export default function HistorialPedidos() {
         pedidos.map(pedido => (
           <div key={pedido.id} className="border-b py-4">
             <p className="font-semibold">Pedido #{pedido.id}</p>
-            <p>Fecha: {new Date(pedido.fecha).toLocaleString()}</p>
+            <p>Fecha: {new Date(pedido.fecha).toLocaleString('es-ES')}</p>
             <p>Método de pago: {pedido.metodo_pago}</p>
             <p>Total: {pedido.total} €</p>
             <h4 className="mt-2 font-semibold">Productos:</h4>
-            <ul className="ml-4 list-disc">
-              {pedido.detalles.map((detalle, index) => (
-                <li key={index}>
-                  ID Producto: {detalle.producto_id}, Cantidad: {detalle.cantidad}, Precio Unitario: {detalle.precio_unitario} €
-                </li>
-              ))}
-            </ul>
+            {pedido.detalles?.length > 0 ? (
+              <ul className="ml-4 list-disc">
+                {pedido.detalles.map((detalle, index) => (
+                  <li key={index}>
+                    ID Producto: {detalle.producto_id}, Cantidad: {detalle.cantidad}, Precio Unitario: {detalle.precio_unitario} €
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-sm text-gray-500">No hay detalles para este pedido.</p>
+            )}
           </div>
         ))
       )}

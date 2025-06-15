@@ -1,4 +1,3 @@
-// src/components/Login.jsx
 import { useState } from 'react'
 import axios from 'axios'
 
@@ -7,20 +6,18 @@ export default function Login() {
   const [mensaje, setMensaje] = useState('')
   const [usuario, setUsuario] = useState(null)
 
-  // Guardamos los cambios del formulario
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  // Enviamos los datos al backend
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    axios.post('`${import.meta.env.VITE_BACKEND_URL}/login', form)
+    axios.post(`${import.meta.env.VITE_BACKEND_URL}/login`, form)
       .then(res => {
         setMensaje('Login exitoso ✅')
-        setUsuario(res.data.usuario) // Guardamos el usuario en el estado
-        localStorage.setItem('token', res.data.token) // Guardamos el token
+        setUsuario(res.data.usuario)
+        localStorage.setItem('token', res.data.token)
         localStorage.setItem('usuario', JSON.stringify(res.data.usuario))
       })
       .catch(err => {
@@ -57,7 +54,6 @@ export default function Login() {
         </button>
       </form>
 
-      {/* Mostrar info del usuario si está logueado */}
       {usuario && (
         <div className="mt-4 text-center">
           <p>Bienvenido, <strong>{usuario.nombre}</strong></p>
@@ -66,4 +62,3 @@ export default function Login() {
     </div>
   )
 }
-

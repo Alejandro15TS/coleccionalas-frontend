@@ -4,7 +4,6 @@ import PayPalButton from './PayPalButton';
 export default function Cart({ cart, removeFromCart, setCart }) {
   const token = localStorage.getItem('token');
 
-  // Función a ejecutar cuando el pago con PayPal se completa correctamente
   const handlePagoExitoso = async () => {
     const carritoProcesado = cart.map(item => ({
       ...item,
@@ -57,10 +56,7 @@ export default function Cart({ cart, removeFromCart, setCart }) {
       )}
 
       {cart.length > 0 && (
-        <>
-          {/* Botón de PayPal */}
-          <PayPalButton carrito={cart} onPagoExitoso={handlePagoExitoso} />
-        </>
+        <PayPalButton carrito={cart} onPagoExitoso={handlePagoExitoso} />
       )}
     </div>
   );

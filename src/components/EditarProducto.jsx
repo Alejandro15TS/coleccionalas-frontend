@@ -14,7 +14,7 @@ export default function EditarProducto() {
   });
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/productos/${id}`)
+    axios.get(`${import.meta.env.VITE_BACKEND_URL}/productos/${id}`)
       .then(res => setProducto(res.data))
       .catch(err => console.error('Error al obtener producto:', err));
   }, [id]);
@@ -34,7 +34,7 @@ export default function EditarProducto() {
     })
     .then(() => {
       alert('Producto actualizado ✅');
-      navigate('/admin'); // vuelve al panel admin
+      navigate('/admin');
     })
     .catch(err => {
       console.error('Error al actualizar producto:', err);

@@ -5,21 +5,19 @@ import { Link } from 'react-router-dom'
 export default function AdminPanel() {
   const [productos, setProductos] = useState([])
 
-  // Cargar productos al iniciar
   useEffect(() => {
     fetchProductos()
   }, [])
 
   const fetchProductos = async () => {
     try {
-      const res = await axios.get('http://localhost:3001/productos')
+      const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/productos`)
       setProductos(res.data)
     } catch (err) {
       console.error('Error al cargar productos:', err)
     }
   }
 
-  // Eliminar producto con token de autenticación
   const eliminarProducto = async (id) => {
     const confirmar = confirm('¿Estás seguro de que deseas eliminar este producto?')
     if (!confirmar) return
