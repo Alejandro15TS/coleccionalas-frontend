@@ -40,12 +40,7 @@ cd Colecci-nalas-todas---Frontend
 bash
 npm install
 
-4. Crea un archivo .env con la URL de tu backend:
-
-env
-VITE_API_URL=http://localhost:5000
-
-5. Inicia el proyecto:
+4. Inicia el proyecto:
 
 bash
 npm run dev
