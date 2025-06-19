@@ -1,3 +1,6 @@
+# Colecciónalas Todas - Backend 🃏
+
+Este repositorio contiene el frontend de **Colecciónalas Todas**, una tienda online de cartas coleccionables desarrollada como proyecto final del ciclo formativo de Desarrollo de Aplicaciones Web.
 
 - Despliegue en **Vercel**
 
@@ -24,25 +27,27 @@ main.jsx → Punto de entrada
 
 1. Clona el repositorio:
 
-```bash
+bash
 git clone https://github.com/Alejandro15TS/coleccionalas-frontend
 
-Entra en la carpeta del proyecto:
+2. Entra en la carpeta del proyecto:
 
-```bash
+bash
 cd Colecci-nalas-todas---Frontend
-Instala las dependencias:
 
-```bash
+3. Instala las dependencias:
+
+bash
 npm install
-Crea un archivo .env con la URL de tu backend:
+
+4. Crea un archivo .env con la URL de tu backend:
 
 env
 VITE_API_URL=http://localhost:5000
 
-Inicia el proyecto:
-bash
+5. Inicia el proyecto:
 
+bash
 npm run dev
 El frontend se ejecutará por defecto en http://localhost:5173.
 
@@ -52,4 +57,4 @@ Este frontend está desplegado en Vercel.
 🧠 Autor
 Alejandro Tomás Sabater
 Técnico Superior en Desarrollo de Aplicaciones Web
-LinkedIn
+https://www.linkedin.com/in/alejandro-tomas-sabater-982224123/
