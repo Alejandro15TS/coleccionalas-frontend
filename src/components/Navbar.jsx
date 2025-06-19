@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Encabezado fijo con el nombre del sitio */}
+      {/* Encabezado fijo*/}
       <header className="bg-cyan-600 text-white text-center py-4 shadow-md mb-4">
         <h1 className="text-2xl font-bold uppercase tracking-wide">Colecciónalas Todas</h1>
       </header>

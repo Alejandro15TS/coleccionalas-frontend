@@ -1,4 +1,3 @@
-// MainApp.jsx
 import { useState, useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 
@@ -12,7 +11,7 @@ import Navbar from './components/Navbar'
 import Perfil from './components/Perfil'
 import AdminPanel from './components/AdminPanel'
 import EditarProducto from './components/EditarProducto'
-import CrearProducto from './components/CrearProducto' // ✅ IMPORTACIÓN AÑADIDA
+import CrearProducto from './components/CrearProducto'
 
 export default function MainApp() {
   const [selectedCategory, setSelectedCategory] = useState(null)
@@ -71,7 +70,7 @@ export default function MainApp() {
           <Route path="/historial" element={<Historial />} />
           <Route path="/admin" element={<AdminPanel />} />
           <Route path="/admin/editar/:id" element={<EditarProducto />} />
-          <Route path="/admin/crear" element={<CrearProducto />} /> {/* ✅ RUTA AÑADIDA */}
+          <Route path="/admin/crear" element={<CrearProducto />} /> 
         </Routes>
       </div>
     </>

@@ -63,7 +63,7 @@ export default function CrearProducto() {
         <input name="precio" placeholder="Precio" type="number" step="0.01" value={nuevoProducto.precio} onChange={handleChange} className="w-full p-2 border rounded" required />
         <input name="imagen_url" placeholder="URL de Imagen" value={nuevoProducto.imagen_url} onChange={handleChange} className="w-full p-2 border rounded" required />
         <input name="categoria_id" placeholder="ID Categoría" type="number" value={nuevoProducto.categoria_id} onChange={handleChange} className="w-full p-2 border rounded" required />
-        <input name="stock" placeholder="Stock (opcional)" type="number" value={nuevoProducto.stock} onChange={handleChange} className="w-full p-2 border rounded" />
+        <input name="stock" placeholder="Stock" type="number" value={nuevoProducto.stock} onChange={handleChange} className="w-full p-2 border rounded" />
         <button type="submit" className="w-full bg-green-600 text-white py-2 rounded">Crear Producto</button>
       </form>
     </div>

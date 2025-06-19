@@ -1,4 +1,3 @@
-// src/components/CategoryBar.jsx
 
 import React from 'react'
 
